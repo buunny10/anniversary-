@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Valentine Confession</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        h1, p {
+            font-family: "Quicksand";
+            font-optical-sizing: auto;
+        }
+
+        h1 {
+            font-weight: 200;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        .instruction {
+            position: absolute;
+            font-size: 1.6rem;
+            color: rgba(255, 0, 0, 0.554);
+            top: 36%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            transition: transform 2s;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .heart > img {
+            width: 50px;
+            height: auto;
+            animation-name: beat;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        .message {
+            padding: 25px;
+            background-color: #eee;
+            font-family: "Quicksand", serif;
+            font-optical-sizing: auto;
+            font-size: clamp(16px, 10vw, 17px);
+            text-align: justify;
+            line-height: 1.5em;
+            width: 80%;
+            max-width: 550px;
+            height: 78%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            animation-name: openmsg;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-play-state: paused;
+            animation-fill-mode: forwards;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            border-radius: 5px;
+            overflow: scroll;
+            scrollbar-width: none;
+        }
+
+        .message .sincere {
+            text-align: left;
+            font-family: "Cinzel, serif";
+            font-size: 14px;
+            line-height: 1.2em;
+        }
+
+        .message .sincere p {
+            margin: 0;
+        }
+
+        @keyframes beat {
+            0% { width: 50px; }
+            25% { width: 58px; }
+            30% { width: 50px; }
+            50% { width: 45px; }
+            60% { width: 50px; }
+            75% { width: 58px; }
+            100% { width: 50px; }
+        }
+
+        @keyframes openmsg {
+            0% { height: 0px; padding: 0px 20px; }
+            100% { height: 75%; padding: 20px 20px; }
+        }
+
+        @keyframes heartMove {
+            0% { top: 50% }
+            100% { top: 85%; transform: translate(-50%, 0); }
+        }
+
+        .openNor {
+            animation-direction: normal;
+            animation-play-state: running;
+        }
+
+        .closeNor {
+            animation-direction: reverse;
+            animation-play-state: running;
+        }
+
+        .no-anim {
+            animation: none;
+        }
+
+        .closed {
+            height: 0px;
+            padding: 0px 20px;
+        }
+
+        .bottom {
+            bottom: 5px;
+        }
+
+        .openHer {
+            animation-name: heartMove;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+        }
+
+        .closeHer {
+            animation-name: heartMove;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-play-state: running;
+            animation-direction: reverse;
+            animation-fill-mode: forwards;
+        }
+
+        .beating > img {
+            animation-name: beat;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        .openedHer {
+            top: 85%;
+            transform: translate(-50%, 0);
+        }
+    </style>
+</head>
+<body>
+    <p class="instruction">Click the heart💗</p>
+    <div class="container">
+        <label>
+            <div class="heart">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg"></img>
+            </div>
+            <input id="messageState" type="checkbox" style="display:none"/>
+        </label>
+        <div class="message">
+            <h1 style="font-family: Cinzel, serif; font-size: 40px; letter-spacing: 1.2px;">To my soulmate💗</h1>
+            <p> 
+                <span>
+                    &emsp; First of all ı wanna start by saying that thank you for all the memories we made and continue make.
+I don’t say it enough, but I’m so grateful for you.
+You’re the kind of friend who makes life brighter, even on the days when the world feels heavy.
+You’re the one who knows when to just give me a shoulder and say, “Shut up, you’re being dramatic.”
+(And I am always.)
+Three year ago, I gained not just a friend, but a soulmate.
+Nobody made the effort to keep me around as much as you do.
+Three year since i met you.
+Three year since ı got a wonderful person like you in my life.
+Three year since ı trust a girl under a month not knowing that she will be my person for life.
+and for all of the things you made for me,I don’t say it enough, but I’m so grateful for you.
+                </span>
+                <br> <br>
+                <span>
+                    &emsp;  So here’s to us. To another year of adventures, stupid jokes, and moments that make my heart feel full. To the nights we’ve stayed up too late talking about everything and nothing.
+To the memories we’ve made and the ones we’ve yet to create.
+To the kind of friendship that feels like home.
+I don’t know what I did to deserve you, but I’m so glad you’re in my life.
+You’re not just my friend—you’re my sister with no blood. And I wouldn’t trade that for anything.
+Happy Friendship Anniversary, my forever person. Here’s to many more years of us being us.
+
+
+
+
+                </span>      
+            </p>
+            <br>
+            <div class="sincere">
+                <p style="font-weight: bold;"> Forever and always,</p>
+                <p>Your "MY WOMAN"💗</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery kütüphanesi -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#messageState").on("change", function() {
+                $(".message").removeClass("openNor").removeClass("closeNor");
+                if ($("#messageState").is(":checked")) {
+                    $(".message").removeClass("closed").removeClass("no-anim").addClass("openNor");
+                    $(".heart").removeClass("closeHer").removeClass("openedHer").addClass("openHer");
+                    $(".container").stop().animate({"backgroundColor": "#f48fb1"}, 2000);
+                    console.log("Abrindo");
+                } else {
+                    $(".message").removeClass("no-anim").addClass("closeNor");
+                    $(".heart").removeClass("openHer").removeClass("openedHer").addClass("closeHer");
+                    $(".container").stop().animate({"backgroundColor": "#fce4ec"}, 2000);
+                    console.log("fechando");
+                }
+            });
+
+            $(".message").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+                console.log("Animation End");
+                if ($(".message").hasClass("closeNor"))
+                    $(".message").addClass("closed");
+                $(".message").removeClass("openNor").removeClass("closeNor").addClass("no-anim");
+            });
+
+            $(".heart").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+                console.log("Animation End");
+                if (!$(".heart").hasClass("closeHer"))
+                    $(".heart").addClass("openedHer").addClass("beating");
+                else
+                    $(".heart").addClass("no-anim").removeClass("beating");
+                $(".heart").removeClass("openHer").removeClass("closeHer");
+            });
+        });
+    </script>
+</body>
+</html>
